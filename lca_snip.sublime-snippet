@@ -1,0 +1,34 @@
+<snippet>
+	<content><![CDATA[
+  vector<ll> euler, height, first ;
+  vector<ll> adj[10010];
+  vector<bool> visited ;
+  void dfs(ll x, ll h) {       //euler_tour.
+  	visited[x] = true;
+  	height[x] = h;
+  	first[x] = euler.size();
+  	euler.push_back(x);
+  	for(auto it : adj[x]) {
+  		if(!visited[it]) {
+  			dfs(it, h+1);
+  			euler.push_back(x) ;
+  		}
+  	}
+  }
+   // for logN query add a segtree.
+int main(){
+ IOS
+#ifdef SHAN
+    freopen("input.txt" , "r" , stdin);  
+#endif
+   
+      resize and initialize each array //  euler.clear(), height.resize(n+1), first.resize(n+1), visited.resize(n+1, false);
+    	
+  return 0;
+} //good night.
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>LCA</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope></scope>
+</snippet>

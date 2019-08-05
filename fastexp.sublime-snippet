@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+const ll MOD  = (ll)(1e9+7);
+ll fast_exp(ll base, ll exp) {
+    ll res=1;
+    while(exp>0) {
+       if(exp%2==1) res=(res*base)%MOD;
+       base=(base*base)%MOD;
+       exp/=2;
+    }
+    return res%MOD;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>fast_exp</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
